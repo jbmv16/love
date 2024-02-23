@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Moving Button</title>
+</head>
+<style>
+body {
+  background-color: 
+  rgb(255, 102, 181);
+}
+  #movingButton {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.but {
+  display: flex;
+  margin-top: 91px;
+  margin-left: 60px;
+  
+}
+#movingButton {
+margin-top: 309px;
+  margin-left: 150px;
+}
+button {
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(to right, rgba(55,255,255,0.5), rgba(5,55,255,0.5));
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+h1 {
+  text-align: center;
+  margin-top: 230px;
+  color: white;
+}
+</style>
+<body>
+  <h1 id="hi">Crush mo ba ako?</h1>
+  <div class = "but">
+   <button onclick="heHi()">Yes</button>
+  <button id="movingButton">No</button>
+  </div>
+  
+  
+
+</body>
+<script type="text/javascript" charset="utf-8">
+const movingButton = document.getElementById('movingButton');
+
+movingButton.addEventListener('click', () => {
+  const randomX = Math.floor(Math.random() * window.innerWidth);
+  const randomY = Math.floor(Math.random() * window.innerHeight);
+
+  movingButton.style.left = `${randomX}px`;
+  movingButton.style.top = `${randomY}px`;
+});
+function heHi() {
+  let x = "YIEEEEE!😍😍";
+  document.getElementById("hi").innerHTML = x;
+}
+
+</script>
+</html>
