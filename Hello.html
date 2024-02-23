@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Moving Button</title>
+</head>
+<style>
+  #movingButton {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+  
+</style>
+<body>
+  <h1>Do you want</h1>
+   <button id="">Yes</button>
+  <button id="movingButton">No</button>
+  
+  
+  
+
+</body>
+<script type="text/javascript" charset="utf-8">
+const movingButton = document.getElementById('movingButton');
+
+movingButton.addEventListener('click', () => {
+  const randomX = Math.floor(Math.random() * window.innerWidth);
+  const randomY = Math.floor(Math.random() * window.innerHeight);
+
+  movingButton.style.left = `${randomX}px`;
+  movingButton.style.top = `${randomY}px`;
+});
+
+
+</script>
+</html>
