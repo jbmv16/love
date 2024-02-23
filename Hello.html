@@ -7,19 +7,59 @@
   <title>Moving Button</title>
 </head>
 <style>
+body {
+  background-color: 
+  rgb(255, 102, 181);
+}
   #movingButton {
   position: absolute;
   top: 50px;
   left: 50px;
 }
-
+.but {
+  display: flex;
+  margin-top: 91px;
   
+  
+}
+#movingButton {
+margin-top: 309px;
+  left: 50%;
+}
+button {
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(to right, rgba(55,255,255,0.5), rgba(5,55,255,0.5));
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+h1 {
+  text-align: center;
+  margin-top: 230px;
+  color: white;
+}
+#jbJ {
+  margin-left: 370px;
+}
+
+  @keyframes dance {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    #hi {
+      font-size: 2em;
+      font-weight: bold;
+      animation: dance 2s infinite;
+    }
 </style>
 <body>
-  <h1>Do you want</h1>
-   <button id="">Yes</button>
+  <h1 id="hi">Crush mo ba ako?</h1>
+  <div class = "but">
+   <button onclick="heHi()" id="jbJ">Yes</button>
   <button id="movingButton">No</button>
-  
+  </div>
   
   
 
@@ -34,7 +74,10 @@ movingButton.addEventListener('click', () => {
   movingButton.style.left = `${randomX}px`;
   movingButton.style.top = `${randomY}px`;
 });
-
+function heHi() {
+  let x = "YIEEEEE!😍😍";
+  document.getElementById("hi").innerHTML = x;
+}
 
 </script>
 </html>
